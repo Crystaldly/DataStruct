@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "sqlist.c",
               "ToolTip": "G:\\code\\DataStruct\\DataStruct\\sqlist.c",
               "RelativeToolTip": "sqlist.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-07-18T11:08:15.006Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "sqlist.h",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-18T11:07:57.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T11:07:57.137Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "main.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-07-18T11:07:36.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T11:07:36.93Z"
             }
           ]
         }
