@@ -42,7 +42,7 @@ int list_clear(sqlink L)
 }
 
 
-int list_delete(sqlink L)
+int list_free(sqlink L)
 {
 	if (L == NULL)
 		return -1;
@@ -75,10 +75,18 @@ int list_length(sqlink L)
 	return (L->last + 1);
 }
 
-
+/*
+* @ret -1-not exist pos
+**/
+//value在线性表中的位置
 int list_locate(sqlink L, data_t value)
 {
-	return 0;
+	int i = 0;
+	for (i = 0;i <= L->last;i++) {
+		if (L->data[i] == value)
+			return i;
+	}
+	return -1;
 }
 
 
@@ -110,6 +118,79 @@ int list_insert(sqlink L, data_t value, int pos)
 	L->data[pos] = value;//将新值存进下标为pos的位置
 	L->last++;//最后一位下标+1，代表线性表插入了新元素。
 
+	return 0;
+}
+/*删除线性表中的一个元素*/
+//第一步，考虑空表，数据的合法性 pos->[0,last]
+//第二步，元素是往前移动的
+//第三步，更新线性表的成员，last--。
+int list_delete(sqlink L, int pos)
+{
+	if (L->last == -1) {
+		printf("List is empty\n");
+		return -1;
+	}
+	
+	//pos [0,last]
+	if (pos < 0 || pos > L->last) {
+		printf("delete is invalid\n");
+		return -1;
+	}
+
+	//move [pos+1,last]
+	for (int i = pos + 1;i <= L->last;i++) {
+		L->data[i - 1] = L->data[i];
+	}
+
+	//update
+	L->last--;
+
+	return 0;
+}
+
+/*合并两个线性表*/
+int list_merge(sqlink L1, sqlink L2)
+{
+	int i = 0;
+	int ret;
+
+	while (i <= L2->last) {
+		ret = list_locate(L1,L2->data[i]);
+		if (ret == -1) {
+			if (list_insert(L1, L2->data[i], L1->last + 1) == -1)
+				return -1;
+		}
+
+		i++;
+	}
+	return 0;
+}
+
+
+/*删除重复元素*/
+int list_purge(sqlink L)
+{
+	int i;
+	int j;
+	if(L->last == 0)
+	return 0;
+
+	i = 1;
+	while (i <= L->last) {
+		j = i - 1;
+		while (j >= 0) {
+			if (L->data[i] == L->data[j]) {
+				list_delete(L, i);
+				break;
+			}
+			else {
+				j--;
+			}
+		}
+		if (j < 0) {
+			i++;
+		}
+	}
 	return 0;
 }
 
