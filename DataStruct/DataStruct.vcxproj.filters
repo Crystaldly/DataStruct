@@ -21,9 +21,15 @@
     <ClCompile Include="sqlist.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="linklist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sqlist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="linklist.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

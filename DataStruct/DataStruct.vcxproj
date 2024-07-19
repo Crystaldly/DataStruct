@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="linklist.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="sqlist.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="linklist.h" />
     <ClInclude Include="sqlist.h" />
   </ItemGroup>
   <ItemGroup>

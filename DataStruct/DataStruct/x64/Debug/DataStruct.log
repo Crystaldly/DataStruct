@@ -1,2 +1,5 @@
-﻿  main.c
+﻿  linklist.c
+  main.c
+  正在生成代码...
+G:\code\DataStruct\DataStruct\linklist.c(30,1): warning C4716: “Llist_show”: 必须返回一个值
   DataStruct.vcxproj -> G:\code\DataStruct\DataStruct\x64\Debug\DataStruct.exe

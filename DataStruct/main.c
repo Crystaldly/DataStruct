@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "sqlist.h"
+#include "linklist.h"
 
 void test_insert();
 void test_delete();
@@ -10,7 +11,25 @@ int main()
 	//test_insert();
 	//test_delete();
 	//test_merge();
-	void test_purge();
+	//void test_purge();
+
+	linklist H;
+	int value;
+
+	H = Llist_create();
+	if (H == NULL)
+		return -1;
+
+	printf("input:");
+	while (1) {
+		scanf_s("%d", &value);
+		if (value == 1)
+			break;
+		list_tail_insert(H, value);
+		printf("input:");
+	}
+	Llist_show(H);
+
 	return 0;
 }
 
